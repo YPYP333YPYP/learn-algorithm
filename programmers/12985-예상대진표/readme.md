@@ -36,5 +36,13 @@ def solution(n,a,b):
 
 ## 리팩토링
 ```python
-
+def solution(n,a,b):
+    answer = 0
+    
+    while a != b:
+        answer += 1
+        a = (a+1) // 2
+        b = (b+1) // 2
+    return answer
 ```
+조금 더 간단한 방법으로 2로 나누면서 몫이 같아질때 까지 내용을 반복하고 반복한 만큼이 answer이 되는 경우이다.
